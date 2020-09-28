@@ -1,4 +1,3 @@
-/* eslint-disable max-statements-per-line */
 /**
  * @file Teste da função `Pedra, Papel e Tesoura`.
  * @author Gabriel Augusto 'Patrola' Almeida
