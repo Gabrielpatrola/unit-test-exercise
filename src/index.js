@@ -10,8 +10,7 @@ const readUserInput = require('./readUserInput.js');
 (async () => {
 	const player1 = await readUserInput('Jogador 1:');
 	const player2 = await readUserInput('Jogador 2:');
-
 	const result = rps(player1, player2);
 
-	console.log(result);
+	return result;
 })();

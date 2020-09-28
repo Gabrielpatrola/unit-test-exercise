@@ -37,8 +37,7 @@
 	},
 	"lint-staged": {
 		"*.{js, mjs}": [
-			"eslint",
-			"tap"
+			"eslint"
 		]
 	}
 }
