@@ -1,3 +1,4 @@
+/* eslint-disable max-statements-per-line */
 /**
  * @file Teste da função `Pedra, Papel e Tesoura`.
  * @author Gabriel Augusto 'Patrola' Almeida
@@ -26,6 +27,16 @@ tap.test('Jogador 2 ganha', (assert) => {
 	assert.equal(rps('tesoura', 'pedra'), 'jogador 2 ganhou');
 	assert.equal(rps('papel', 'tesoura'), 'jogador 2 ganhou');
 	assert.equal(rps('pedra', 'papel'), 'jogador 2 ganhou');
+
+	assert.end();
+});
+
+tap.test('Erros', (assert) => {
+	assert.throws(() => { rps('', 'papel'); });
+	assert.throws(() => { rps('banana', 'pedra'); });
+	assert.throws(() => { rps('tesoura', 'maça'); });
+	assert.throws(() => { rps('maça', 'maça'); });
+	assert.throws(() => { rps('', ''); });
 
 	assert.end();
 });

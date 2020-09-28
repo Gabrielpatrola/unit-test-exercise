@@ -1,6 +1,6 @@
 /**
  * @file Função de `Pedra, Papel e Tesoura`.
- * @author Seu nome aqui
+ * @author Gabriel Augusto 'Patrola' Almeida
  * @version 1.0.0
  */
 
@@ -11,9 +11,19 @@
  * @param {string} player2 Entrada do jogador 2.
  *
  * @returns {string} O resultado.
+ * @throws {string} Erro.
  */
 module.exports = function rockPaperScisors(player1, player2) {
 	let result = '';
+	const options = ['pedra', 'papel', 'tesoura'];
+
+	if (player1 === '' || player2 === '') {
+		throw new Error('Erro');
+	}
+
+	if (!options.includes(player1.toLowerCase()) || !options.includes(player2.toLowerCase())) {
+		throw new Error('Erro');
+	}
 
 	if (player1.toLowerCase() === 'pedra' && player2.toLowerCase() === 'tesoura') {
 		result = 'jogador 1 ganhou';
